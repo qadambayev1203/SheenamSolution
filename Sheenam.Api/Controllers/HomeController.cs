@@ -9,6 +9,6 @@ namespace Sheenam.Api.Controllers
     public class HomeController : RESTFulController
     {
         [HttpGet("get")]
-        public ActionResult<string> Get() => Ok("Hello Dear");
+        public ActionResult<string> Get() => Ok("Hello Dear!");
     }
 }
