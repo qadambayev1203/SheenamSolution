@@ -14,5 +14,8 @@ namespace Sheenam.Api.Controllers
     {
         [HttpGet("get")]
         public ActionResult<string> Get() => Ok("Hello Dear!");
+
+        [HttpGet("getby")]
+        public ActionResult<string> GetBy() => Ok("Hello Dear1!");
     }
 }
