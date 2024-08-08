@@ -3,11 +3,13 @@
 // Free To Use Comfort and Peace
 //==================================================
 
-namespace Sheenam.Api.Tests.Unit
+using Microsoft.EntityFrameworkCore;
+using Sheenam.Api.Models.Foundations.Guests;
+
+namespace Sheenam.Api.Brokers.Storages
 {
-    public class DeleteMe
+    public partial class StorageBroker
     {
-        [Fact]
-        public void ShouldBeTrue() => Assert.True(true);
+        public DbSet<Guest> Guests { get; set; }
     }
 }

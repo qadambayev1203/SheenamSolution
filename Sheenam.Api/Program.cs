@@ -3,9 +3,7 @@
 // Free To Use Comfort and Peace
 //==================================================
 
-
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
