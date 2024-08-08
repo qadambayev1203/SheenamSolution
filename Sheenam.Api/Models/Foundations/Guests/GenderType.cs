@@ -3,11 +3,12 @@
 // Free To Use Comfort and Peace
 //==================================================
 
-namespace Sheenam.Api.Tests.Unit
+namespace Sheenam.Api.Models.Foundations.Guests
 {
-    public class DeleteMe
+    public enum GenderType
     {
-        [Fact]
-        public void ShouldBeTrue() => Assert.True(true);
+        Male,
+        Female,
+        Other
     }
 }
