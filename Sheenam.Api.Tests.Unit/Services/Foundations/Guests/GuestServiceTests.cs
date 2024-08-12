@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Sheenam.Api.Tests.Unit.Services.Foundations.Guests
 {
-    public class GuestServiceTests
+    public partial class GuestServiceTests
     {
         private readonly Mock<IStorageBroker> storageBrokerMock;
         private readonly IGuestService guestService;
@@ -25,29 +25,6 @@ namespace Sheenam.Api.Tests.Unit.Services.Foundations.Guests
                 new GuestService(storageBroker: this.storageBrokerMock.Object);
         }
 
-        [Fact]
-        public async Task ShouldAddGuestAsync()
-        {
-            // Arrange
-            Guest randomGuest = new Guest
-            {
-                Id = Guid.NewGuid(),
-                FirstName = "John",
-                LastName = "Doe",
-                Address = "123 Main St, Tashkent, Uzbekistan",
-                DateOfBirth = new DateTimeOffset(new DateTime(1990, 5, 15)),
-                Email = "johndoe@example.com",
-                Gender = GenderType.Male,
-                PhoneNumber = "+998901234567"
-            };
-
-            this.storageBrokerMock.Setup(broker =>
-                broker.InsertGuestAsync(randomGuest))
-                    .ReturnsAsync(randomGuest);
-            // Act
-            Guest actual = await this.guestService.AddGuestAsync(randomGuest);
-            // Assert
-            actual.Should().BeEquivalentTo(randomGuest);
-        }
     }
 }
+
